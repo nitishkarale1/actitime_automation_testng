@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="actitime_automation_TestNG">
+    <parameter name="browserName" value="chrome"/>
+    <test name="Regression1" parallel="tests">
+        <classes>
+            <class name="com.actitimeautomation.sample.TestNGAnnotations"/>
+        </classes>
+    </test>
+
+    <test name="Regression2">
+<!--        <packages>-->
+<!--            <package name="com.actitimeautomation.sample"/>-->
+<!--        </packages>-->
+        <classes>
+            <class name="com.actitimeautomation.sample.WindowsOperations"/>
+        </classes>
+    </test>
+    <test name="Sanity">
+        <classes>
+            <class name="com.actitimeautomation.sample.TestNGAnnotations">
+                <methods>
+                    <exclude name="test3"/>
+                    <exclude name="test2"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

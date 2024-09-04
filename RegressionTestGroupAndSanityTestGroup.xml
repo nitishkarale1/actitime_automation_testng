@@ -1,0 +1,13 @@
+<suite name="actitime_automation_TestNG" verbose="1" >
+    <test name="sanity1">
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.actitimeautomation.sample.SanityTestGroup"/>
+            <class name="com.actitimeautomation.sample.RegressionTestGroup"/>
+        </classes>
+    </test>
+</suite>
